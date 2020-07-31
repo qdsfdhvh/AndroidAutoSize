@@ -1,4 +1,4 @@
-package com.seiko.autosize
+package com.seiko.autosize.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

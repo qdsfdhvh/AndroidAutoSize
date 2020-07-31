@@ -1,2 +1,2 @@
 rootProject.name = "AutoSize"
-include ':app'
+include(":app", ":autosize")
