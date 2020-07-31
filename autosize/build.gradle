@@ -1,0 +1,49 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+//    kotlin("android")
+}
+
+android {
+    compileSdkVersion(30)
+    defaultConfig {
+        minSdkVersion(14)
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation(Deps.appCompat)
+    implementation(Deps.kotlin)
+}
+
+ext {
+    set("bintrayRepo", "maven")
+    set("bintrayName", "AutoSize")
+
+    set("publishedGroupId", "com.seiko.autosize")
+    set("libraryName", "AutoSize")
+    set("artifact", "autosize")
+
+    set("libraryDescription", "一个极低成本的 Android 屏幕适配方案")
+
+    set("siteUrl", "https://github.com/qdsfdhvh/AndroidAutoSize")
+    set("gitUrl", "https://github.com/qdsfdhvh/AndroidAutoSize.git")
+    set("githubRepository", "qdsfdhvh/AndroidAutoSize")
+
+    set("libraryVersion", "0.0.1")
+
+    set("developerId", "qdsfdhvh")
+    set("developerName", "Seiko")
+    set("developerEmail", "605590140@qq.com")
+
+    set("licenseName", "The Apache Software License, Version 2.0")
+    set("licenseUrl", "http://www.apache.org/licenses/LICENSE-2.0.txt")
+    set("allLicenses", ["Apache-2.0"])
+}
+
+apply from: rootProject.file('gradle/publish.gradle')
+//apply(from = rootProject.file("gradle/publish.gradle"))
